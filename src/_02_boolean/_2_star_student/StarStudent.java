@@ -31,7 +31,7 @@ public class StarStudent {
 			JOptionPane.showMessageDialog(null, "Congratulations!");
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Better luck next time!");
+			JOptionPane.showMessageDialog(null, "Better luck next time!"); 
 		}
 		
 	}

@@ -27,7 +27,7 @@ public class test_scores {
 	if (testscore < 35) {
 		JOptionPane.showMessageDialog(null, "Did you even try?");
 	}
-	
+	 
 		
 		
 	}	
