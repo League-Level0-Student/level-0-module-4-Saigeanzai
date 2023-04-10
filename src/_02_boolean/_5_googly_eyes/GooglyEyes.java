@@ -35,40 +35,71 @@ import processing.core.PImage;
  *    circles! To do this, imagine a rectangle that the pupil should stay
  *    within. When mouseX and mouseY goes outside of these bounds, set it back
  *    to the boundary. Put this code before you draw the pupils.
+ *    215 282 - 550 257
  */
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
-    
-    PImage face;
-    
-    @Override
-    public void settings() {
-        size(WIDTH, HEIGHT);
-    }
-    
-    @Override
-    public void setup() {
-face = loadImage("cat.jpg");
-face.resize(800, 600);
-    }
+	static final int WIDTH = 800;
+	static final int HEIGHT = 600;
 
-    @Override
-    public void draw() {
-background(face);
-fill(255, 255,255);
-ellipse(550,257,200,180);
-ellipse(215,282,200,180);
-fill(0, 0,0);
-ellipse(215,282,85,85);
-ellipse(550,257,85,85);
+	PImage face;
+	int x;
+	int y;
+int z;
+int v;
+	@Override
+	public void settings() {
+		size(WIDTH, HEIGHT);
+	}
 
-    }
-    
+	@Override
+	public void setup() {
+		face = loadImage("cat.jpg");
+		face.resize(800, 600);
+	}
 
-    static public void main(String[] args) {
-        PApplet.main(GooglyEyes.class.getName());
-      
+	@Override
+	public void draw() {
+		background(face);
+		fill(255, 255, 255);
+		ellipse(550, 257, 200, 180);
+		ellipse(215, 282, 200, 180);
+		fill(0, 0, 0);
+		x = mouseX;
+		if (x < 215 - 70) {
+			x = 215 - 70;
+		}
 
-    }
+		if (x > 215 + 70) {
+			x = 215 + 70;
+		}
+y = mouseY;
+if (y <282 - 90+50) {
+	y = 282 - 90+50;
+}
+if (y > 282 +90 - 50) {
+	y = 282 +90 - 50;
+}
+z = mouseX;
+if (z < 550 - 70) {
+	z = 550 - 70;
+}
+if (z > 550 +70) {
+	z = 550 +70;
+}
+v = mouseY;
+if (v <257 - 90+50) {
+	v = 257 - 90 + 50;
+}
+if (v > 257 +90 - 50) {
+	v = 257 +90 - 50;
+}
+		ellipse(x, y, 85, 85);
+		ellipse(z, v, 85, 85);
+
+	}
+
+	static public void main(String[] args) {
+		PApplet.main(GooglyEyes.class.getName());
+
+	}
 }
