@@ -9,11 +9,11 @@ String rubber;
 rubber = "league";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-		char letter = rubber.charAt(4);
+		char letter = rubber.charAt(0);
 		System.out.println(letter);
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
-
+ 
 		
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
