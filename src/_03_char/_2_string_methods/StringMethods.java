@@ -5,11 +5,12 @@ public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to contain a minimum of 3 characters
-
+String rubber;
+rubber = "league";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-
-		
+		char letter = rubber.charAt(4);
+		System.out.println(letter);
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
 
